@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 
-// Product data array
 const products = [
   {
     id: 1,
@@ -58,7 +57,6 @@ export default function App() {
       >
         {products.map((product) => (
           <View key={product.id} style={styles.card}>
-            {/* Image Container */}
             <View style={styles.imageContainer}>
               <Image
                 source={{ uri: product.image }}
@@ -66,19 +64,13 @@ export default function App() {
                 resizeMode="cover"
               />
             </View>
-
-            {/* Title and Price Row */}
             <View style={styles.titlePriceRow}>
               <Text style={styles.title}>{product.title}</Text>
               <Text style={styles.price}>{product.price}</Text>
             </View>
-
-            {/* Short Description */}
             <Text style={styles.description}>
               {product.description}
             </Text>
-
-            {/* Buy Button */}
             <TouchableOpacity style={styles.button}>
               <Text style={styles.buttonText}>Acheter maintenant</Text>
             </TouchableOpacity>
